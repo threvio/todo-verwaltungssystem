@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="12"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="de.projekt.todo.ui.MainController"
+      style="-fx-padding:16;">
+
+    <Label text="Todo-Verwaltungssystem"
+           style="-fx-font-size:18px; -fx-font-weight:bold;"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="taskInput" promptText="Neue Aufgabe eingeben..."
+                   HBox.hgrow="ALWAYS"/>
+        <Button text="Hinzufügen" onAction="#onAddTask"/>
+    </HBox>
+
+    <ListView fx:id="taskList" VBox.vgrow="ALWAYS"/>
+
+    <HBox spacing="10">
+        <Button text="Löschen" onAction="#onDeleteTask"/>
+        <Label fx:id="statusLabel" text="Bereit."/>
+    </HBox>
+
+</VBox>
